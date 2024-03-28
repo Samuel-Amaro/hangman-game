@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--dark-navy: #261676;
+	--blue: #2463ff;
+	--linear: #344aba;
+	--color01: #001479d4;
+	--color02: #140e66;
+	--color03: #fe71fe;
+	--color04: #7199ff;
+	--color05: #243041;
+	--color06: #9d2df5;
+	--color07: #ffffff40;
+	--color08: #3c74ff;
+	--color09: #c642fb;
+}
+
+html {
+	font-family: 'Mouse Memoirs', sans-serif;
+}
+
+body {
+	background-image: url('/assets/images/background-mobile.svg');
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (min-width: 376px) {
+	body {
+		background-image: url('/assets/images/background-tablet.svg');
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		background-image: url('/assets/images/background-desktop.svg');
+	}
+}
