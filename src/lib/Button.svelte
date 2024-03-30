@@ -1,10 +1,14 @@
 <script lang="ts">
+	import type { HTMLAnchorAttributes, HTMLAttributes } from 'svelte/elements';
+
 	export let text: string;
 	export let secondary = false;
-	export let route: string | undefined = undefined;
+	export let props: HTMLAttributes<HTMLElement> | HTMLAnchorAttributes | undefined = undefined;
 </script>
 
-<a href={route} class="button" class:secondary on:click on:keydown>
+<!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<a class="button" class:secondary on:click on:keydown {...props}>
 	{text}
 </a>
 
