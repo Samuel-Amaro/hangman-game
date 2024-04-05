@@ -1,13 +1,5 @@
 <script lang="ts">
 	import type { HTMLAttributes, HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
-	import PlayMobile from '$lib/icons/PlayMobile.svelte';
-	import PlayDesktop from '$lib/icons/PlayDesktop.svelte';
-	import BackSmall from '$lib/icons/BackSmall.svelte';
-	import BackMedium from '$lib/icons/BackMedium.svelte';
-	import BackLarge from '$lib/icons/BackLarge.svelte';
-	import MenuSmall from '$lib/icons/MenuSmall.svelte';
-	import MenuMedium from '$lib/icons/MenuMedium.svelte';
-	import MenuLarge from '$lib/icons/MenuLarge.svelte';
 
 	export let as: 'a' | 'button' = 'button';
 	export let variation: 'play' | 'back' | 'menu';
@@ -22,16 +14,57 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:element this={as} class="button" class:secondary on:click on:keydown {...props}>
 	{#if variation === 'play'}
-		<span class="playMobile"><PlayMobile /></span>
-		<span class="playDesktop"><PlayDesktop /></span>
+		<picture class="icon">
+			<source
+				srcset="/assets/images/play-mobile.svg"
+				media="(max-width: 600px)"
+				type="image/svg+xml"
+			/>
+			<source
+				srcset="/assets/images/icon-play.svg"
+				media="(min-width: 600px)"
+				type="image/svg+xml"
+			/>
+			<img src="/assets/images/icon-play.svg" alt="" />
+		</picture>
 	{:else if variation === 'back'}
-		<span class="backSmall"><BackSmall /></span>
-		<span class="backMedium"><BackMedium /></span>
-		<span class="backLarge"><BackLarge /></span>
+		<picture class="icon">
+			<source
+				srcset="/assets/images/back-mobile.svg"
+				media="(min-width: 0px) and (max-width: 400px)"
+				type="image/svg+xml"
+			/>
+			<source
+				srcset="/assets/images/back-tablet.svg"
+				media="(min-width: 400px) and (max-width: 900px)"
+				type="image/svg+xml"
+			/>
+			<source
+				srcset="/assets/images/icon-back.svg"
+				media="(min-width: 900px)"
+				type="image/svg+xml"
+			/>
+			<img src="/assets/images/icon-back.svg" alt="" />
+		</picture>
 	{:else if variation === 'menu'}
-		<span class="menuSmall"><MenuSmall /></span>
-		<span class="menuMedium"><MenuMedium /></span>
-		<span class="menuLarge"><MenuLarge /></span>
+		<picture class="icon">
+			<source
+				srcset="/assets/images/menu-mobile.svg"
+				media="(min-width: 0px) and (max-width: 400px)"
+				type="image/svg+xml"
+			/>
+			<source
+				srcset="/assets/images/menu-tablet.svg"
+				media="(min-width: 400px) and (max-width: 900px)"
+				type="image/svg+xml"
+			/>
+			<source
+				srcset="/assets/images/icon-menu.svg"
+				media="(min-width: 900px)"
+				type="image/svg+xml"
+			/>
+			<img src="/assets/images/icon-menu.svg" alt="" />
+		</picture>
 	{/if}
 </svelte:element>
 
@@ -82,44 +115,7 @@
 		box-shadow: inset 0 -5px 0 -1px var(--color11);
 	}
 
-	.playDesktop,
-	.backMedium,
-	.backLarge,
-	.menuMedium,
-	.menuLarge {
-		display: none;
-	}
-
-	.playMobile,
-	.backSmall,
-	.menuSmall {
+	.icon {
 		display: flex;
-	}
-
-	@media screen and (min-width: 500px) {
-		.playMobile,
-		.backSmall,
-		.menuSmall {
-			display: none;
-		}
-
-		.playDesktop,
-		.backMedium,
-		.menuMedium {
-			display: flex;
-		}
-	}
-
-	@media screen and (min-width: 900px) {
-		.backMedium,
-		.backSmall,
-		.menuMedium {
-			display: none;
-		}
-
-		.backLarge,
-		.menuLarge {
-			display: flex;
-		}
 	}
 </style>
