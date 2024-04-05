@@ -1,6 +1,4 @@
 <script lang="ts">
-	import LogoMobile from '$lib/icons/LogoMobile.svelte';
-	import LogoDesktop from '$lib/icons/LogoDesktop.svelte';
 	import Button from '$lib/Button.svelte';
 	import RoundedButton from '$lib/RoundedButton.svelte';
 </script>
@@ -16,10 +14,15 @@
 
 <div class="wrapper">
 	<div class="menu">
-		<div class="logo">
-			<span class="logoMobile"><LogoMobile /></span>
-			<span class="logoDesktop"><LogoDesktop /></span>
-		</div>
+		<picture class="logo">
+			<source
+				srcset="/assets/images/logo-mobile.svg"
+				media="(max-width: 600px)"
+				type="image/svg+xml"
+			/>
+			<source srcset="/assets/images/logo.svg" media="(min-width: 600px)" type="image/svg+xml" />
+			<img src="/assets/images/logo.svg" alt="" />
+		</picture>
 		<RoundedButton
 			as="a"
 			variation="play"
@@ -66,27 +69,8 @@
 			inset 0 6px var(--blue);
 	}
 
-	.logoMobile,
-	.logoDesktop {
-		display: flex;
-	}
-
 	.logo {
 		position: absolute;
 		top: -50px;
-	}
-
-	.logoDesktop {
-		display: none;
-	}
-
-	@media screen and (min-width: 500px) {
-		.logoMobile {
-			display: none;
-		}
-
-		.logoDesktop {
-			display: block;
-		}
 	}
 </style>
