@@ -65,8 +65,8 @@
 		margin: 0;
 		padding: 0;
 		font-size: 48px;
-		line-height: 58px;
-		letter-spacing: 0.08px;
+		line-height: 120%;
+		letter-spacing: 0.8px;
 		font-weight: 400;
 		text-transform: uppercase;
 		background: linear-gradient(var(--color13), white);
