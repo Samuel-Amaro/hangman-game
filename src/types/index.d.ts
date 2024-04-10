@@ -17,4 +17,12 @@ export type Letter = {
 	id: number;
 	text: string;
 	selected: boolean;
-}
+};
+
+export type JsonValue =
+  | string
+  | number
+  | boolean
+  | null
+  | JsonValue[]
+  | { [key: string]: JsonValue };
