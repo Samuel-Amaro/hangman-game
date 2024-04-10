@@ -20,8 +20,8 @@
 		border-radius: 20px;
 		padding: 24px 0;
 		font-size: 24px;
-		line-height: 19.2px;
-		letter-spacing: 0.08px;
+		line-height: 120%;
+		letter-spacing: 0.8px;
 		font-weight: 400;
 		color: white;
 		box-shadow:
