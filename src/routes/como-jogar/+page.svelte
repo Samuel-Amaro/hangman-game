@@ -1,5 +1,15 @@
 <script lang="ts">
 	import RoundedButton from '$lib/RoundedButton.svelte';
+	import { alert } from '$lib/stores/data';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		$alert = {message: 'Você possui 8 tentativas para adivinhar um nome, divirta-se!', ms: 5000}
+
+		return () => {
+			$alert = null
+		}
+	})
 </script>
 
 <svelte:head>
@@ -71,6 +81,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-flow: row wrap;
+		gap: 10px;
 	}
 
 	h1::after {
@@ -78,6 +90,7 @@
 		position: absolute;
 		left: 0;
 		z-index: -1;
+		top: 0;
 		-webkit-text-stroke-width: 8px;
 		-webkit-text-stroke-color: var(--color12);
 	}
@@ -87,7 +100,7 @@
 		margin: 0;
 		padding: 0;
 		font-size: 48px;
-		line-height: 58px;
+		line-height: 120%;
 		letter-spacing: 0.8px;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -123,8 +136,8 @@
 
 	.number,
 	h2 {
-		font-size: 25px;
-		line-height: 19.2px;
+		font-size: 24px;
+		line-height: 120%;
 		letter-spacing: 0.8px;
 	}
 
@@ -140,7 +153,7 @@
 
 	p {
 		font-size: 16px;
-		line-height: 19.2px;
+		line-height: 120%;
 		letter-spacing: 0.8px;
 		color: var(--color14);
 	}
