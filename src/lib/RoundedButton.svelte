@@ -2,7 +2,7 @@
 	import type { HTMLAttributes, HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
 	export let as: 'a' | 'button' = 'button';
-	export let variation: 'play' | 'back' | 'menu';
+	export let variation: 'play' | 'back' | 'menu' | 'close';
 	export let props:
 		| HTMLAnchorAttributes
 		| HTMLButtonAttributes
@@ -12,7 +12,15 @@
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<svelte:element this={as} class="button" class:secondary on:click on:keydown {...props}>
+<svelte:element
+	this={as}
+	class="button"
+	class:secondary
+	on:click
+	on:keydown
+	{...props}
+	class:close={variation === 'close'}
+>
 	{#if variation === 'play'}
 		<picture class="icon">
 			<source
@@ -65,6 +73,8 @@
 			/>
 			<img src="/assets/images/icon-menu.svg" alt="" />
 		</picture>
+	{:else if variation === 'close'}
+		&Chi;
 	{/if}
 </svelte:element>
 
@@ -117,5 +127,14 @@
 
 	.icon {
 		display: flex;
+	}
+
+	.close {
+		color: white;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: 0.8px;
+		width: 25px;
+		height: 25px;
 	}
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import RoundedButton from '$lib/RoundedButton.svelte';
 	import SquareButton from '$lib/SquareButton.svelte';
-	import { categorys } from '../../utils';
+	import { categorys } from '$lib/utils/index';
 </script>
 
 <svelte:head>

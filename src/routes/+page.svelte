@@ -2,17 +2,17 @@
 	import Button from '$lib/Button.svelte';
 	import RoundedButton from '$lib/RoundedButton.svelte';
 	import { onMount } from 'svelte';
-	import { alert, visitCounter } from '$lib/stores/data'
+	import { alert, visitCounter } from '$lib/stores/data';
 
 	onMount(() => {
-		if($visitCounter === 0) {
-			$alert = {message: 'Bem-vindo ao Jogo da Forca.', ms: 8000}
+		if ($visitCounter === 0) {
+			$alert = { message: 'Bem-vindo ao Jogo da Forca.', ms: 8000 };
 		}
 
 		return () => {
-			$alert = null
-		}
-	})
+			$alert = null;
+		};
+	});
 </script>
 
 <svelte:head>

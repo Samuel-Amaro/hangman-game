@@ -4,12 +4,12 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		$alert = {message: 'Você possui 8 tentativas para adivinhar um nome, divirta-se!', ms: 5000}
+		$alert = { message: 'Você possui 8 tentativas para adivinhar um nome, divirta-se!', ms: 5000 };
 
 		return () => {
-			$alert = null
-		}
-	})
+			$alert = null;
+		};
+	});
 </script>
 
 <svelte:head>

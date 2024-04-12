@@ -5,8 +5,8 @@
 	import { visitCounter } from '$lib/stores/data';
 
 	onMount(() => {
-		$visitCounter = $visitCounter + 1
-	})
+		$visitCounter = $visitCounter + 1;
+	});
 </script>
 
 <slot />
