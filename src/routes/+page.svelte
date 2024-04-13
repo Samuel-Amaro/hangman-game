@@ -3,6 +3,8 @@
 	import RoundedButton from '$lib/RoundedButton.svelte';
 	import { onMount } from 'svelte';
 	import { alert, visitCounter } from '$lib/stores/data';
+	import { page } from '$app/stores';
+	import GenerateOgImage from '$lib/GenerateOgImage.svelte'
 
 	onMount(() => {
 		if ($visitCounter === 0) {
@@ -22,6 +24,14 @@
 		content="O jogo da forca oferece uma experiência envolvente e educativa, onde os usuários podem desfrutar de desafios de palavras enquanto aprimoram suas habilidades linguísticas. Com uma interface intuitiva e recursos bem projetados, proporciona uma experiência de jogo fluida e imersiva."
 	/>
 	<meta name="keywords" content="Jogo, Hangman Game, Jogo Forca, Forca Game" />
+	<meta property="og:title" content="O Jogo Da Forca" />
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:description"
+		content="O jogo da forca oferece uma experiência envolvente e educativa, onde os usuários podem desfrutar de desafios de palavras enquanto aprimoram suas habilidades linguísticas."
+	/>
+	<meta property="og:url" content={$page.url.href} />
+	<GenerateOgImage title="O Jogo Da Forca" path={$page.url.href} />
 </svelte:head>
 
 <div class="wrapper">
@@ -29,10 +39,10 @@
 		<picture class="logo">
 			<source
 				srcset="/assets/images/logo-mobile.svg"
-				media="(max-width: 600px)"
+				media="(max-width: 679px)"
 				type="image/svg+xml"
 			/>
-			<source srcset="/assets/images/logo.svg" media="(min-width: 600px)" type="image/svg+xml" />
+			<source srcset="/assets/images/logo.svg" media="(min-width: 680px)" type="image/svg+xml" />
 			<img src="/assets/images/logo.svg" alt="" />
 		</picture>
 		<RoundedButton
@@ -42,8 +52,7 @@
 				href: '/em-jogo',
 				title: 'Ir para Jogo',
 				rel: 'next',
-				'aria-label': 'Ir para Jogo',
-				style: 'margin-bottom: 57px'
+				'aria-label': 'Ir para Jogo'
 			}}
 		/>
 		<Button
@@ -72,17 +81,39 @@
 		flex-direction: column;
 		align-items: center;
 		background: linear-gradient(var(--linear) 0%, var(--color01) 100%);
-		min-width: 324px;
+		max-width: 592px;
+		width: 100%;
 		border-radius: 48px;
 		padding: 138px 31px 64px 30px;
 		position: relative;
 		box-shadow:
 			inset 0 -8px var(--color02),
 			inset 0 6px var(--blue);
+		gap: 57px;
 	}
 
 	.logo {
 		position: absolute;
 		top: -50px;
+	}
+
+	@media screen and (min-width: 680px) {
+		.wrapper {
+			padding: 0;
+		}
+
+		.menu {
+			border-radius: 72px;
+			padding: 129px 0 51px 0;
+			box-shadow:
+				inset 0 -8px 0 4px var(--color02),
+				inset 0 6px 0 8px var(--blue);
+			gap: 58px;
+		}
+
+		.logo {
+			position: absolute;
+			top: -110px;
+		}
 	}
 </style>

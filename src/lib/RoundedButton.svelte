@@ -25,12 +25,12 @@
 		<picture class="icon">
 			<source
 				srcset="/assets/images/play-mobile.svg"
-				media="(max-width: 600px)"
+				media="(max-width: 679px)"
 				type="image/svg+xml"
 			/>
 			<source
 				srcset="/assets/images/icon-play.svg"
-				media="(min-width: 600px)"
+				media="(min-width: 680px)"
 				type="image/svg+xml"
 			/>
 			<img src="/assets/images/icon-play.svg" alt="" />
@@ -136,5 +136,13 @@
 		letter-spacing: 0.8px;
 		width: 25px;
 		height: 25px;
+	}
+
+	@media screen and (min-width: 680px) {
+		a,
+		button {
+			width: 200px;
+			height: 200px;
+		}
 	}
 </style>

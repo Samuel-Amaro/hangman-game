@@ -21,6 +21,8 @@
 		border-radius: 40px;
 		padding: 12px 64px;
 		font-size: 32px;
+		line-height: 120%;
+		letter-spacing: 0.8px;
 		text-transform: uppercase;
 		cursor: pointer;
 		color: white;

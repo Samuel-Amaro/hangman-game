@@ -3,7 +3,7 @@
 	import type { PageData } from './$types';
 	import ProgressBar from '$lib/ProgressBar.svelte';
 	import { alphabet, randomIdx } from '$lib/utils/index';
-	import { onDestroy} from 'svelte';
+	import { onDestroy } from 'svelte';
 	import { alert, datas } from '$lib/stores/data';
 	import type { Category, Letter } from '$types';
 	import PlayableLetter from '$lib/PlayableLetter.svelte';
@@ -23,7 +23,7 @@
 	let showMenuWinner: boolean = false;
 	let showMenuLoser: boolean = false;
 
-	$: name = getName(data.category as Category) as string
+	$: name = getName(data.category as Category) as string;
 	$: splitName = name.split(' ');
 
 	function getRandomName(category: number | Category) {
@@ -64,7 +64,7 @@
 			if (idxCategory > -1) {
 				return getRandomName(idxCategory).name;
 			}
-		} else { 
+		} else {
 			return getRandomName(category).name;
 		}
 	}
@@ -202,23 +202,23 @@
 </header>
 <main>
 	{#if splitName}
-			<div class="letters" aria-label="Letras descorbertas">
-				{#each splitName as word}
-					{@const splitWord = word.split('').filter((w) => {
-						if (![':', '.', '-'].includes(w)) {
-							return true;
-						}
-						return false;
-					})}
-					<div class="line">
-						{#each splitWord as letter}
-							<PlayableLetter
-								letter={letterIsVisible(letter, letterSelecteds) ? letter : undefined}
-							/>
-						{/each}
-					</div>
-				{/each}
-			</div>
+		<div class="letters" aria-label="Letras descorbertas">
+			{#each splitName as word}
+				{@const splitWord = word.split('').filter((w) => {
+					if (![':', '.', '-'].includes(w)) {
+						return true;
+					}
+					return false;
+				})}
+				<div class="line">
+					{#each splitWord as letter}
+						<PlayableLetter
+							letter={letterIsVisible(letter, letterSelecteds) ? letter : undefined}
+						/>
+					{/each}
+				</div>
+			{/each}
+		</div>
 	{/if}
 	<ul class="keys" aria-label="Letras disponiveis Para Escolher">
 		{#each letterSelecteds as letter (letter.id)}
