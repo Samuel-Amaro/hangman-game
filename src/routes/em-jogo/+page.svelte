@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import GenerateOgImage from '$lib/GenerateOgImage.svelte';
 	import RoundedButton from '$lib/RoundedButton.svelte';
 	import SquareButton from '$lib/SquareButton.svelte';
 	import { categorys } from '$lib/utils/index';
@@ -14,6 +16,14 @@
 		name="keywords"
 		content="Jogo da Forca, Categoria, Palavras, Adivinhação, Diversão, Desafio, Passatempo, Entretenimento, Jogos online, Habilidades, Conhecimentos, Palavras comuns, Temas variados, Aprendizado, Amigos"
 	/>
+	<meta property="og:title" content="Escolha uma categoria" />
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:description"
+		content="Escolha sua categoria favorita e desafie seus conhecimentos com o clássico jogo da forca! Explore uma variedade de temas e divirta-se enquanto testa suas habilidades de adivinhação."
+	/>
+	<meta property="og:url" content={$page.url.href} />
+	<GenerateOgImage title="Escolha uma categoria" path={$page.url.href} />
 </svelte:head>
 
 <header class="header">
@@ -84,5 +94,42 @@
 
 	li:not(:last-child) {
 		margin-bottom: 32px;
+	}
+
+	@media screen and (min-width: 680px) {
+		header {
+			padding: 61px 48px 0 40px;
+			margin-bottom: 114px;
+			justify-content: flex-start;
+		}
+
+		h1::after {
+			-webkit-text-stroke-width: 14px;
+			text-align: center;
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 104px;
+			letter-spacing: -0.8px;
+			flex: 0 0 calc(100% - 74px);
+			text-align: center;
+		}
+
+		main {
+			padding: 0 48px 112px 40px;
+		}
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			gap: 32px;
+			justify-content: center;
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 0px;
+		}
 	}
 </style>

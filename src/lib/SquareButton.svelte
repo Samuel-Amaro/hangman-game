@@ -35,4 +35,17 @@
 		background-color: var(--color07);
 		background-blend-mode: color;
 	}
+
+	@media screen and (min-width: 680px) {
+		a {
+			width: 384px;
+			border-radius: 40px;
+			padding: 62.33px 0;
+			font-size: 48px;
+			box-shadow:
+				0 -2px 0 3px var(--color08),
+				0 1px 0 6px var(--color02);
+			white-space: nowrap;
+		}
+	}
 </style>
