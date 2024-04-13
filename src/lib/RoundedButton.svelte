@@ -14,7 +14,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:element
 	this={as}
-	class="button"
+	class={"button " + variation}
 	class:secondary
 	on:click
 	on:keydown
@@ -39,12 +39,12 @@
 		<picture class="icon">
 			<source
 				srcset="/assets/images/back-mobile.svg"
-				media="(min-width: 0px) and (max-width: 400px)"
+				media="(min-width: 0px) and (max-width: 679px)"
 				type="image/svg+xml"
 			/>
 			<source
 				srcset="/assets/images/back-tablet.svg"
-				media="(min-width: 400px) and (max-width: 900px)"
+				media="(min-width: 680px) and (max-width: 900px)"
 				type="image/svg+xml"
 			/>
 			<source
@@ -92,7 +92,7 @@
 	}
 
 	a,
-	button {
+	button, .play {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -140,9 +140,15 @@
 
 	@media screen and (min-width: 680px) {
 		a,
-		button {
+		button, .play {
 			width: 200px;
 			height: 200px;
+		}
+
+		.back {
+			width: 64px;
+			height: 64px;
+			box-shadow: inset 0 -6px 0 7px var(--color11);
 		}
 	}
 </style>

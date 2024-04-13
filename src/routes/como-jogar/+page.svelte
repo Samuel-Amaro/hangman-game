@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import GenerateOgImage from '$lib/GenerateOgImage.svelte';
 	import RoundedButton from '$lib/RoundedButton.svelte';
 	import { alert } from '$lib/stores/data';
 	import { onMount } from 'svelte';
@@ -22,6 +24,14 @@
 		name="keywords"
 		content="Jogo de palavras, Adivinhação de letras, Categoria de palavras, Desafio mental, Diversão interativa, Palavra secreta, Competição de palavras, Estratégia de adivinhação, Saúde do jogador, Entretenimento educativo, Jogo de letras, Aprendizado divertido, Palavras-chave, Exercício cognitivo, Quebra-cabeças de palavras"
 	/>
+	<meta property="og:title" content="Instruções de Como Jogar" />
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:description"
+		content="Desafie-se a adivinhar palavras secretas em diferentes categorias! Teste suas habilidades em um jogo divertido onde você e o computador alternam para adivinhar letras."
+	/>
+	<meta property="og:url" content={$page.url.href} />
+	<GenerateOgImage title="Instruções de Como Jogar" path={$page.url.href} />
 </svelte:head>
 
 <header class="header">
@@ -40,33 +50,27 @@
 <main>
 	<ul>
 		<li>
-			<header class="headerCard">
-				<span class="number">01</span>
-				<h2>Escolha uma categoria</h2>
-			</header>
-			<p>
+			<span class="number">01</span>
+			<h2 class="title">Escolha uma categoria</h2>
+			<p class="text">
 				Primeiro, escolha uma categoria de palavras, como animais ou filmes. O computador então
 				seleciona aleatoriamente uma palavra secreta desse tópico e mostra espaços em branco para
 				cada letra da palavra.
 			</p>
 		</li>
 		<li>
-			<header class="headerCard">
-				<span class="number">02</span>
-				<h2>Adivinhe as letras</h2>
-			</header>
-			<p>
+			<span class="number">02</span>
+			<h2 class="title">Adivinhe as letras</h2>
+			<p class="text">
 				Revezem-se para adivinhar as letras. O computador preenche os espaços em branco relevantes
 				se o seu palpite estiver correto. Se estiver errado, você perde um pouco de saúde, que se
 				esgota após oito palpites incorretos.
 			</p>
 		</li>
 		<li>
-			<header class="headerCard">
-				<span class="number">03</span>
-				<h2>Ganhar ou perder</h2>
-			</header>
-			<p>
+			<span class="number">03</span>
+			<h2 class="title">Ganhar ou perder</h2>
+			<p class="text">
 				Você ganha adivinhando todas as letras da palavra antes que sua saúde acabe. Se a barra de
 				saúde esvaziar antes de você adivinhar a palavra, você perde.
 			</p>
@@ -121,17 +125,17 @@
 		background-color: white;
 		padding: 32px;
 		border-radius: 20px;
+		display: grid;
+		grid-template-columns: minmax(auto, min-content) minmax(auto, 1fr);
+		grid-template-areas: 
+			'a b'
+			'c c';
+		gap: 16px;
+		justify-content: flex-start;
 	}
 
 	li:not(:last-child) {
 		margin-bottom: 24px;
-	}
-
-	.headerCard {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-		margin: 0 0 16px 0;
 	}
 
 	.number,
@@ -143,12 +147,14 @@
 
 	.number {
 		color: var(--blue);
+		grid-area: a;
 	}
 
 	h2 {
 		color: var(--dark-navy);
 		text-transform: uppercase;
 		font-weight: 400;
+		grid-area: b;
 	}
 
 	p {
@@ -156,5 +162,59 @@
 		line-height: 120%;
 		letter-spacing: 0.8px;
 		color: var(--color14);
+		grid-area: c;
+	}
+
+	@media screen and (min-width: 680px) {
+		.header {
+			padding: 61px 48px 0 40px;
+			margin-bottom: 100px;
+			justify-content: flex-start;
+		}
+
+		h1::after {
+			-webkit-text-stroke-width: 14px;
+			width: 100%;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 104px;
+			letter-spacing: -0.8px;
+			flex: 0 0 calc(100% - 74px);
+			text-align: center;
+		}
+		
+		main {
+			padding: 0 48px 98px 40px;
+		}
+
+		li {
+			padding: 32px 40px;
+			border-radius: 40px;
+			grid-template-areas: 
+				'a b'
+				'a c';
+			gap: 16px 40px;
+			align-items: center;
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 32px;
+		}
+
+		.number{
+			font-size: 88px;
+			line-height: 120%;
+			letter-spacing: normal;
+		}
+
+		h2{
+			font-size: 40px;
+		}
+
+		p {
+			font-size: 20px;
+		}
 	}
 </style>
