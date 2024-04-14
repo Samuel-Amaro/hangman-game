@@ -43,4 +43,15 @@
 		background-color: var(--blue);
 		color: white;
 	}
+
+	@media screen and (min-width: 680px) {
+		button {
+			border-radius: 24px;
+			width: 64px;
+			height: 84px;
+			font-size: 48px;
+			line-height: 120%;
+			letter-spacing: -0.8px;
+		}
+	}
 </style>

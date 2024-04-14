@@ -35,4 +35,16 @@
 	.disabled {
 		opacity: 0.25;
 	}
+
+	@media screen and (min-width: 680px) {
+		span,
+		.disabled {
+			padding: 0;
+			border-radius: 32px;
+			font-size: 64px;
+			line-height: 120%;
+			width: 88px;
+			height: 112px;
+		}		
+	}
 </style>

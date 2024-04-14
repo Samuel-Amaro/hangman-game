@@ -11,6 +11,7 @@
 	import Menu from '$lib/Menu.svelte';
 	import Button from '$lib/Button.svelte';
 	import { page } from '$app/stores';
+	import GenerateOgImage from '$lib/GenerateOgImage.svelte';
 
 	export let data: PageData;
 
@@ -167,6 +168,14 @@
 		name="keywords"
 		content="Jogo da forca, Palavras cruzadas, Jogos de palavras, Desafio mental, Adivinhação de palavras, Passatempo educativo, Entretenimento cerebral, Diversão com palavras, Desafio de vocabulário, Jogos online gratuitos"
 	/>
+	<meta property="og:title" content={`Em Jogo categoria ${data.title?.toLowerCase()}`} />
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:description"
+		content="Desafie sua mente com nosso emocionante jogo da forca online! Teste suas habilidades de adivinhação enquanto desvenda palavras e frases."
+	/>
+	<meta property="og:url" content={$page.url.href} />
+	<GenerateOgImage title={`Em Jogo categoria ${data.title?.toLowerCase()}`} path={$page.url.href} />
 </svelte:head>
 
 <header>
@@ -188,12 +197,12 @@
 		<picture>
 			<source
 				srcset="/assets/images/heart-mobile.svg"
-				media="(max-width: 600px)"
+				media="(max-width: 679px)"
 				type="image/svg+xml"
 			/>
 			<source
 				srcset="/assets/images/heart-desktop.svg"
-				media="(min-width: 600px)"
+				media="(min-width: 680px)"
 				type="image/svg+xml"
 			/>
 			<img src="/assets/images/heart-desktop.svg" alt="" />
@@ -337,5 +346,46 @@
 
 	.letters {
 		margin-bottom: 118px;
+	}
+
+	@media screen and (min-width: 680px) {
+		header {
+			padding: 61px 48px 0 40px;
+			margin-bottom: 111px;
+		}
+
+		.wrapper:first-of-type {
+			gap: 32px;
+		}
+
+		.wrapper:last-of-type {
+			gap: 40px;
+		}
+
+		h2 {
+			font-size: 48px;
+			letter-spacing: 0.8px;
+		}
+
+		main {
+			padding: 0 48px 0 40px;
+			margin-bottom: 114px;
+		}
+
+		.letters {
+			margin-bottom: 134px;
+		}
+
+		.line {
+			gap: 12px;
+		}
+
+		.line:not(:last-of-type) {
+			margin-bottom: 16px;
+		}
+
+		.keys {
+			gap: 24px 16px;
+		}
 	}
 </style>

@@ -36,4 +36,16 @@
 		height: 8px;
 		transition: width ease-in-out 0.3s;
 	}
+
+	@media screen and (min-width: 680px) {
+		div {
+			height: 31px;
+			min-width: 160px;
+			padding: 9px 11px;
+		}
+
+		span {
+			height: 13px;
+		}
+	}
 </style>

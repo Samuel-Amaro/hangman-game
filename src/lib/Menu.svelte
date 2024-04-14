@@ -95,6 +95,7 @@
 	nav {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 34px;
 	}
 
@@ -122,5 +123,29 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-align: center;
+	}
+
+
+	@media screen and (min-width: 680px) {
+		div {
+			border-radius: 72px;
+			padding: 0 0 71px 0;
+			min-width: 592px;
+		}
+
+		h3::after {
+			width: 100%;
+			-webkit-text-stroke-width: 15px;
+		}
+
+		h3 {
+			top: -89px;
+			font-size: 134px;
+		}
+
+		nav{
+			max-width: 290px;
+			margin: 0 auto;
+		}
 	}
 </style>
