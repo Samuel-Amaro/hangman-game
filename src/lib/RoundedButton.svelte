@@ -14,7 +14,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:element
 	this={as}
-	class={"button " + variation}
+	class={'button ' + variation}
 	class:secondary
 	on:click
 	on:keydown
@@ -44,12 +44,12 @@
 			/>
 			<source
 				srcset="/assets/images/back-tablet.svg"
-				media="(min-width: 680px) and (max-width: 900px)"
+				media="(min-width: 680px) and (max-width: 949px)"
 				type="image/svg+xml"
 			/>
 			<source
 				srcset="/assets/images/icon-back.svg"
-				media="(min-width: 900px)"
+				media="(min-width: 950px)"
 				type="image/svg+xml"
 			/>
 			<img src="/assets/images/icon-back.svg" alt="" />
@@ -63,12 +63,12 @@
 			/>
 			<source
 				srcset="/assets/images/menu-tablet.svg"
-				media="(min-width: 680px) and (max-width: 900px)"
+				media="(min-width: 680px) and (max-width: 949px)"
 				type="image/svg+xml"
 			/>
 			<source
 				srcset="/assets/images/icon-menu.svg"
-				media="(min-width: 900px)"
+				media="(min-width: 950px)"
 				type="image/svg+xml"
 			/>
 			<img src="/assets/images/icon-menu.svg" alt="" />
@@ -92,7 +92,8 @@
 	}
 
 	a,
-	button, .play {
+	button,
+	.play {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -140,15 +141,25 @@
 
 	@media screen and (min-width: 680px) {
 		a,
-		button, .play {
+		button,
+		.play {
 			width: 200px;
 			height: 200px;
 		}
 
-		.back, .menu {
+		.back,
+		.menu {
 			width: 64px;
 			height: 64px;
 			box-shadow: inset 0 -6px 0 7px var(--color11);
+		}
+	}
+
+	@media screen and (min-width: 950px) {
+		.back,
+		.menu {
+			width: 94px;
+			height: 94px;
 		}
 	}
 </style>

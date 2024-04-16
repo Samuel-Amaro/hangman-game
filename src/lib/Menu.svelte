@@ -125,7 +125,6 @@
 		text-align: center;
 	}
 
-
 	@media screen and (min-width: 680px) {
 		div {
 			border-radius: 72px;
@@ -143,7 +142,7 @@
 			font-size: 134px;
 		}
 
-		nav{
+		nav {
 			max-width: 290px;
 			margin: 0 auto;
 		}

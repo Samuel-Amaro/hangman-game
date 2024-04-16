@@ -87,10 +87,6 @@ export function localStore<T extends JsonValue>(key: string, initial: T) {
 	};
 }
 
-export function generateOgImage(html: string, width: number, height: number) {
-	
-}
-
 export function getTemplateOgImage(title: string, path: string) {
 	return `
 	<div style="background-color: #261676; padding: 10px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">

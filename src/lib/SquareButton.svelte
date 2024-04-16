@@ -48,4 +48,10 @@
 			white-space: nowrap;
 		}
 	}
+
+	@media screen and (min-width: 950px) {
+		a {
+			padding: 66px 0;
+		}
+	}
 </style>

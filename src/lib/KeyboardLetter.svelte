@@ -54,4 +54,12 @@
 			letter-spacing: -0.8px;
 		}
 	}
+
+	@media screen and (min-width: 950px) {
+		button {
+			width: 109px;
+			height: 84px;
+			letter-spacing: 0.8px;
+		}
+	}
 </style>

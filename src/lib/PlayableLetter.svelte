@@ -45,6 +45,17 @@
 			line-height: 120%;
 			width: 88px;
 			height: 112px;
-		}		
+		}
+	}
+
+	@media screen and (min-width: 950px) {
+		span,
+		.disabled {
+			border-radius: 40px;
+			font-size: 88px;
+			letter-spacing: normal;
+			width: 112px;
+			height: 128px;
+		}
 	}
 </style>

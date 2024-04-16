@@ -48,4 +48,10 @@
 			height: 13px;
 		}
 	}
+
+	@media screen and (min-width: 950px) {
+		div {
+			min-width: 240px;
+		}
+	}
 </style>

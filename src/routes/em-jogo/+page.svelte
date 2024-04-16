@@ -132,4 +132,42 @@
 			margin-bottom: 0px;
 		}
 	}
+
+	@media screen and (min-width: 950px) {
+		header {
+			padding: 80px 48px 0 40px;
+			margin-bottom: 155px;
+		}
+
+		h1 {
+			font-size: 136px;
+			letter-spacing: -0.8px;
+			flex: 0 0 calc(100% - 104px);
+		}
+
+		main {
+			padding: 0 48px 196px 40px;
+		}
+
+		ul {
+			gap: 50px 32px;
+			justify-content: center;
+		}
+	}
+
+	@media screen and (min-width: 1250px) {
+		header {
+			padding: 80px 0 0 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 155px auto;
+		}
+
+		main {
+			padding: 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 196px auto;
+		}
+	}
 </style>

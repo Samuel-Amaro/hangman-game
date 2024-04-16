@@ -388,4 +388,53 @@
 			gap: 24px 16px;
 		}
 	}
+
+	@media screen and (min-width: 950px) {
+		header {
+			padding: 60px 48px 0 40px;
+			margin-bottom: 88px;
+		}
+
+		.wrapper:first-of-type {
+			gap: 57px;
+		}
+
+		h2 {
+			font-size: 88px;
+			letter-spacing: normal;
+		}
+
+		main {
+			padding: 0 48px 0 40px;
+			margin-bottom: 78px;
+		}
+
+		.letters {
+			margin-bottom: 120px;
+		}
+
+		.line {
+			gap: 16px;
+		}
+
+		.keys {
+			gap: 24px;
+		}
+	}
+
+	@media screen and (min-width: 1250px) {
+		header {
+			padding: 60px 0 0 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 88px auto;
+		}
+
+		main {
+			padding: 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 78px auto;
+		}
+	}
 </style>

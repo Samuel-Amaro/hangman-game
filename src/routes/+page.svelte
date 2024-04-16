@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { alert, visitCounter } from '$lib/stores/data';
 	import { page } from '$app/stores';
-	import GenerateOgImage from '$lib/GenerateOgImage.svelte'
+	import GenerateOgImage from '$lib/GenerateOgImage.svelte';
 
 	onMount(() => {
 		if ($visitCounter === 0) {

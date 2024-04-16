@@ -127,7 +127,7 @@
 		border-radius: 20px;
 		display: grid;
 		grid-template-columns: minmax(auto, min-content) minmax(auto, 1fr);
-		grid-template-areas: 
+		grid-template-areas:
 			'a b'
 			'c c';
 		gap: 16px;
@@ -184,7 +184,7 @@
 			flex: 0 0 calc(100% - 74px);
 			text-align: center;
 		}
-		
+
 		main {
 			padding: 0 48px 98px 40px;
 		}
@@ -192,7 +192,7 @@
 		li {
 			padding: 32px 40px;
 			border-radius: 40px;
-			grid-template-areas: 
+			grid-template-areas:
 				'a b'
 				'a c';
 			gap: 16px 40px;
@@ -203,18 +203,85 @@
 			margin-bottom: 32px;
 		}
 
-		.number{
+		.number {
 			font-size: 88px;
 			line-height: 120%;
 			letter-spacing: normal;
 		}
 
-		h2{
+		h2 {
 			font-size: 40px;
 		}
 
 		p {
 			font-size: 20px;
+		}
+	}
+
+	@media screen and (min-width: 950px) {
+		h1::after {
+			-webkit-text-stroke-width: 16px;
+		}
+
+		h1 {
+			font-size: 136px;
+			flex: 0 0 calc(100% - 104px);
+		}
+
+		.header {
+			padding: 80px 48px 0 40px;
+		}
+
+		main {
+			padding: 0 48px 167px 40px;
+		}
+
+		ul {
+			display: flex;
+			flex-flow: row wrap;
+			gap: 32px;
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 0px;
+		}
+
+		li {
+			padding: 0;
+			display: flex;
+			flex-flow: column wrap;
+			gap: 40px;
+			align-items: center;
+			justify-content: flex-start;
+			flex: 0 0 384px;
+			height: 550px;
+			padding: 59px 17px;
+		}
+
+		h2 {
+			font-size: 48px;
+			text-align: center;
+		}
+
+		p {
+			font-size: 26px;
+			text-align: center;
+		}
+	}
+
+	@media screen and (min-width: 1250px) {
+		.header {
+			padding: 80px 0 0 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 64px auto;
+		}
+
+		main {
+			padding: 0;
+			max-width: 1216px;
+			margin-bottom: 0px;
+			margin: 0 auto 167px auto;
 		}
 	}
 </style>
