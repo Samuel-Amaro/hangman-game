@@ -2,6 +2,10 @@ import { browser } from '$app/environment';
 import type { JsonValue } from '$types';
 import { writable } from 'svelte/store';
 
+export function calculatePercentFill(min: number, max: number, value: number) {
+	return (100 * (value - min)) / (max - min);
+}
+
 export const categorys = [
 	{ label: 'FILMES', route: 'filmes' },
 	{ label: 'PROGRAMAS DE TELEVISÃO', route: 'programas-de-televisao' },

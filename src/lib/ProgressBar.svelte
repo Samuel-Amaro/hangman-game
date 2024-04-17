@@ -1,11 +1,9 @@
 <script lang="ts">
+	import { calculatePercentFill } from "$lib/utils";
+
 	export let min: number;
 	export let max: number;
 	export let value: number;
-
-	function calculatePercentFill(min: number, max: number, value: number) {
-		return (100 * (value - min)) / (max - min);
-	}
 </script>
 
 <div
@@ -16,7 +14,7 @@
 	aria-valuemax={max}
 	title="Barra de vida"
 >
-	<span style="width: {calculatePercentFill(min, max, value)}%;"></span>
+	<span data-testid="bar" style="width: {calculatePercentFill(min, max, value)}%;"></span>
 </div>
 
 <style>
