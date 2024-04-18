@@ -5,12 +5,12 @@ O jogo da forca oferece uma experiência envolvente e educativa, onde os usuári
 ## Índice
 
 - [Visão geral](#visão-geral)
-   - [O desafio](#o-desafio)
-   - [Comportamento Esperado](#comportamento-esperado)
-   - [Captura de tela](#captura de tela)
-   - [Links](#links)
+  - [O desafio](#o-desafio)
+  - [Comportamento Esperado](#comportamento-esperado)
+  - [Captura de tela](#captura de tela)
+  - [Links](#links)
 - [Meu processo](#meu-processo)
-   - [Construído com](#construído-com)
+  - [Construído com](#construído-com)
 - [Autor](#autor)
 - [Projeto](#projeto)
 
@@ -20,25 +20,25 @@ O jogo da forca oferece uma experiência envolvente e educativa, onde os usuári
 
 Os usuários devem ser capazes de:
 
-- [X] Aprenda a jogar Hangman no menu principal.
-- [X] Inicie um jogo e escolha uma categoria.
-- [X] Jogue Hangman com uma palavra aleatória selecionada dessa categoria.
-- [X] Veja a diminuição atual da saúde com base em suposições incorretas de letras.
-- [X] Ganhe o jogo se completar a palavra inteira.
-- [X] Perde o jogo se fizer oito palpites errados.
-- [X] Pause o jogo e escolha continuar, escolha uma nova categoria ou saia.
-- [X] Visualize o layout ideal da interface dependendo do tamanho da tela do dispositivo.
-- [X] Veja os estados de foco e foco para todos os elementos interativos da página.
-- [X] Navegue por todo o jogo apenas usando o teclado.
+- [x] Aprenda a jogar Hangman no menu principal.
+- [x] Inicie um jogo e escolha uma categoria.
+- [x] Jogue Hangman com uma palavra aleatória selecionada dessa categoria.
+- [x] Veja a diminuição atual da saúde com base em suposições incorretas de letras.
+- [x] Ganhe o jogo se completar a palavra inteira.
+- [x] Perde o jogo se fizer oito palpites errados.
+- [x] Pause o jogo e escolha continuar, escolha uma nova categoria ou saia.
+- [x] Visualize o layout ideal da interface dependendo do tamanho da tela do dispositivo.
+- [x] Veja os estados de foco e foco para todos os elementos interativos da página.
+- [x] Navegue por todo o jogo apenas usando o teclado.
 
 ### Comportamento Esperado
 
-- [X] Escolha uma palavra aleatória da categoria escolhida para iniciar o jogo. Você precisará calcular o espaçamento das palavras e quando quebrar para uma nova linha, pois alguns nomes/títulos são (intencionalmente) longos.
-- [X] Se o jogador adivinhar uma letra corretamente, preencha todos os espaços relevantes e desative a letra no teclado.
-- [X] Se o jogador adivinhar errado, desative a letra do teclado e reduza o medidor de saúde. O medidor de saúde deve esvaziar após oito palpites errados. O jogador perde neste momento e o menu aparece.
-- [X] Selecionar "jogar novamente" no menu inicia um novo jogo com a mesma categoria. Selecionar "nova categoria" navega para a tela "escolher uma categoria". Sair navega de volta ao menu principal.
-- [X] Os jogadores nunca devem ver o mesmo nome/título várias vezes se jogarem mais de uma partida em uma visita. Os dados JSON possuem um booleano "selecionado" para ajudá-lo a filtrar as opções já reproduzidas.
-- [X] Clicar no menu hambúrguer durante um jogo deve mostrar o menu "pausado".
+- [x] Escolha uma palavra aleatória da categoria escolhida para iniciar o jogo. Você precisará calcular o espaçamento das palavras e quando quebrar para uma nova linha, pois alguns nomes/títulos são (intencionalmente) longos.
+- [x] Se o jogador adivinhar uma letra corretamente, preencha todos os espaços relevantes e desative a letra no teclado.
+- [x] Se o jogador adivinhar errado, desative a letra do teclado e reduza o medidor de saúde. O medidor de saúde deve esvaziar após oito palpites errados. O jogador perde neste momento e o menu aparece.
+- [x] Selecionar "jogar novamente" no menu inicia um novo jogo com a mesma categoria. Selecionar "nova categoria" navega para a tela "escolher uma categoria". Sair navega de volta ao menu principal.
+- [x] Os jogadores nunca devem ver o mesmo nome/título várias vezes se jogarem mais de uma partida em uma visita. Os dados JSON possuem um booleano "selecionado" para ajudá-lo a filtrar as opções já reproduzidas.
+- [x] Clicar no menu hambúrguer durante um jogo deve mostrar o menu "pausado".
 
 ### Captura de tela
 
@@ -67,7 +67,7 @@ Os usuários devem ser capazes de:
 - Site - [Samuel Amaro](https://meu-portfolio-topaz-alpha.vercel.app/)
 - Frontend Mentor - [@samuel-amaro](https://www.frontendmentor.io/profile/samuel-amaro)
 
-## Projeto 
+## Projeto
 
 ### Criado um projeto
 

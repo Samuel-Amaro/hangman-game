@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { calculatePercentFill } from "$lib/utils";
+	import { calculatePercentFill } from '$lib/utils';
 
 	export let min: number;
 	export let max: number;
