@@ -33,7 +33,7 @@
 				media="(min-width: 680px)"
 				type="image/svg+xml"
 			/>
-			<img src="/assets/images/icon-play.svg" alt="" />
+			<img data-testid="play" src="/assets/images/icon-play.svg" alt="" />
 		</picture>
 	{:else if variation === 'back'}
 		<picture class="icon">
@@ -52,7 +52,7 @@
 				media="(min-width: 950px)"
 				type="image/svg+xml"
 			/>
-			<img src="/assets/images/icon-back.svg" alt="" />
+			<img data-testid="back" src="/assets/images/icon-back.svg" alt="" />
 		</picture>
 	{:else if variation === 'menu'}
 		<picture class="icon">
@@ -71,7 +71,7 @@
 				media="(min-width: 950px)"
 				type="image/svg+xml"
 			/>
-			<img src="/assets/images/icon-menu.svg" alt="" />
+			<img data-testid="menu" src="/assets/images/icon-menu.svg" alt="" />
 		</picture>
 	{:else if variation === 'close'}
 		&Chi;
