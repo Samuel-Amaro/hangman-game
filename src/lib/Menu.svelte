@@ -25,7 +25,7 @@
 	}}
 />
 
-<dialog bind:this={dialogEl}>
+<dialog bind:this={dialogEl} data-testid="dia">
 	<div>
 		<h3 data-text={title}>{title}</h3>
 		<nav>
