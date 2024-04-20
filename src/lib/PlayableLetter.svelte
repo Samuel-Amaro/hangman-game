@@ -2,7 +2,7 @@
 	export let letter: string | undefined = undefined;
 </script>
 
-<span class:disabled={!letter ? true : false}>
+<span data-testid="letter" class:disabled={!letter ? true : false}>
 	{#if letter}
 		{letter}
 	{/if}
