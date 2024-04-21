@@ -7,26 +7,26 @@ describe('Menu.svelte', () => {
 	afterEach(() => cleanup());
 
 	test('renderiza Menu componente corretamente com titulo', () => {
-    render(Menu);
+		render(Menu);
 
 		expect(screen.getByTestId('dia')).toBeInTheDocument();
-    expect(screen.getByText('Teste Menu')).toBeInTheDocument()
+		expect(screen.getByText('Teste Menu')).toBeInTheDocument();
 	});
 
-  test('menu com slot buttons', () => {
-    render(Menu);
+	test('menu com slot buttons', () => {
+		render(Menu);
 
-    expect(screen.getByText('Button 1')).toBeInTheDocument()
-    expect(screen.getByText('Button 2')).toBeInTheDocument()
-  })
+		expect(screen.getByText('Button 1')).toBeInTheDocument();
+		expect(screen.getByText('Button 2')).toBeInTheDocument();
+	});
 
-  test('fecha menu com esc', () => {
-    render(Menu);
+	test('fecha menu com esc', () => {
+		render(Menu);
 
-    expect(screen.getByTestId('dia')).toBeInTheDocument();
+		expect(screen.getByTestId('dia')).toBeInTheDocument();
 
-    fireEvent.keyDown(screen.getByTestId('dia'), {key: 'Esc'})
-    
-    expect(screen.getByTestId('dia')).not.toBeVisible()
-  })
+		fireEvent.keyDown(screen.getByTestId('dia'), { key: 'Esc' });
+
+		expect(screen.getByTestId('dia')).not.toBeVisible();
+	});
 });

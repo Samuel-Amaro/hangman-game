@@ -14,49 +14,54 @@ describe('RoundedButton.svelte', () => {
 		expect(screen.queryByTitle('titulo')).toBeInTheDocument();
 	});
 
-  test('variation play', () => {
-    render(RoundedButton, {
-			props: { props: { title: 'titulo', type: "button" }, as: 'button', variation: 'play' }
+	test('variation play', () => {
+		render(RoundedButton, {
+			props: { props: { title: 'titulo', type: 'button' }, as: 'button', variation: 'play' }
 		});
 
-    const elemImg = screen.queryByTestId('play') as HTMLImageElement
+		const elemImg = screen.queryByTestId('play') as HTMLImageElement;
 
-    expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-play.svg')
-  })
+		expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-play.svg');
+	});
 
-  test('variation back', () => {
-    render(RoundedButton, {
-			props: { props: { title: 'titulo', type: "button" }, as: 'button', variation: 'back' }
+	test('variation back', () => {
+		render(RoundedButton, {
+			props: { props: { title: 'titulo', type: 'button' }, as: 'button', variation: 'back' }
 		});
 
-    const elemImg = screen.queryByTestId('back') as HTMLImageElement
+		const elemImg = screen.queryByTestId('back') as HTMLImageElement;
 
-    expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-back.svg')
-  })
+		expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-back.svg');
+	});
 
-  test('variation menu', () => {
-    render(RoundedButton, {
-			props: { props: { title: 'titulo', type: "button" }, as: 'button', variation: 'menu' }
+	test('variation menu', () => {
+		render(RoundedButton, {
+			props: { props: { title: 'titulo', type: 'button' }, as: 'button', variation: 'menu' }
 		});
 
-    const elemImg = screen.queryByTestId('menu') as HTMLImageElement
+		const elemImg = screen.queryByTestId('menu') as HTMLImageElement;
 
-    expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-menu.svg')
-  })
+		expect(elemImg.src).toBe('http://localhost:3000/assets/images/icon-menu.svg');
+	});
 
-  test('variation close', () => {
-    render(RoundedButton, {
-			props: { props: { title: 'titulo', type: "button" }, as: 'button', variation: 'close' }
+	test('variation close', () => {
+		render(RoundedButton, {
+			props: { props: { title: 'titulo', type: 'button' }, as: 'button', variation: 'close' }
 		});
 
-    expect(screen.queryByTitle('titulo')?.innerHTML).toBe('Χ')
-  })
+		expect(screen.queryByTitle('titulo')?.innerHTML).toBe('Χ');
+	});
 
-  test('estilo secundario', () => {
-    render(RoundedButton, {
-			props: { props: { title: 'titulo', type: "button" }, as: 'button', variation: 'close', secondary: true }
+	test('estilo secundario', () => {
+		render(RoundedButton, {
+			props: {
+				props: { title: 'titulo', type: 'button' },
+				as: 'button',
+				variation: 'close',
+				secondary: true
+			}
 		});
 
-    expect(screen.queryByTitle('titulo')).toHaveClass('secondary');
-  })
+		expect(screen.queryByTitle('titulo')).toHaveClass('secondary');
+	});
 });

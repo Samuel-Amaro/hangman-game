@@ -4,47 +4,47 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/svelte';
 import KeyboardLetter from '$lib/KeyboardLetter.svelte';
 
 describe('KeyboardLetter.svelte', () => {
-  afterEach(() => cleanup());
-  
-  test('Renderiza componente KeyboardLetter corretamente', () => {
-    render(KeyboardLetter, {letter: 'T'})
+	afterEach(() => cleanup());
 
-    expect(screen.getByText('T')).toBeInTheDocument()
-  })
+	test('Renderiza componente KeyboardLetter corretamente', () => {
+		render(KeyboardLetter, { letter: 'T' });
 
-  test('KeyboardLetter com evento click', () => {
-    const onClick = vi.fn();
+		expect(screen.getByText('T')).toBeInTheDocument();
+	});
 
-    const {component} = render(KeyboardLetter, {letter: 'T'})
+	test('KeyboardLetter com evento click', () => {
+		const onClick = vi.fn();
 
-    expect(screen.getByText('T')).toBeInTheDocument()
+		const { component } = render(KeyboardLetter, { letter: 'T' });
 
-    component.$on('click', onClick)
-    
-    fireEvent.click(screen.getByText('T'))
+		expect(screen.getByText('T')).toBeInTheDocument();
 
-    expect(onClick).toHaveBeenCalledOnce();
-  })
+		component.$on('click', onClick);
 
-  test('KeyboardLetter com evento keydown', () => {
-    const onKeydown = vi.fn();
+		fireEvent.click(screen.getByText('T'));
 
-    const {component} = render(KeyboardLetter, {letter: 'T'})
+		expect(onClick).toHaveBeenCalledOnce();
+	});
 
-    expect(screen.getByText('T')).toBeInTheDocument()
+	test('KeyboardLetter com evento keydown', () => {
+		const onKeydown = vi.fn();
 
-    component.$on('keydown', onKeydown)
-    
-    fireEvent.keyDown(screen.getByText('T'), { key: 'Enter' });
+		const { component } = render(KeyboardLetter, { letter: 'T' });
 
-    expect(onKeydown).toHaveBeenCalledOnce();
-  })
+		expect(screen.getByText('T')).toBeInTheDocument();
 
-  test('estilo desabilitado', () => {
-    render(KeyboardLetter, {letter: 'T', disabled: true})
+		component.$on('keydown', onKeydown);
 
-    expect(screen.getByText('T')).toBeInTheDocument()
+		fireEvent.keyDown(screen.getByText('T'), { key: 'Enter' });
 
-    expect(screen.getByText('T')).toHaveClass('disabled')
-  })
-})
+		expect(onKeydown).toHaveBeenCalledOnce();
+	});
+
+	test('estilo desabilitado', () => {
+		render(KeyboardLetter, { letter: 'T', disabled: true });
+
+		expect(screen.getByText('T')).toBeInTheDocument();
+
+		expect(screen.getByText('T')).toHaveClass('disabled');
+	});
+});
