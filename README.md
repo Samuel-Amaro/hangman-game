@@ -7,7 +7,7 @@ O jogo da forca oferece uma experiência envolvente e educativa, onde os usuári
 - [Visão geral](#visão-geral)
   - [O desafio](#o-desafio)
   - [Comportamento Esperado](#comportamento-esperado)
-  - [Captura de tela](#captura de tela)
+  - [Captura de tela](#captura-de-tela)
   - [Links](#links)
 - [Meu processo](#meu-processo)
   - [Construído com](#construído-com)
@@ -59,8 +59,10 @@ Os usuários devem ser capazes de:
 - CSS(Flex Box, Grid Layout)
 - Responsive Web Design(RWD)
 - Mobile-First Workflow
+- TypeScript
 - [Svelte](https://svelte.dev/docs/introduction)
 - [SvelteKit](https://kit.svelte.dev/docs/introduction)
+- [Vitest](https://vitest.dev/) - para testes unitários
 
 ## Autor
 
