@@ -46,8 +46,8 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL do repositório: [Adicione o URL da solução aqui](https://your-solution-url.com)
-- URL da solução: [Adicione o URL do site ativo aqui](https://your-live-site-url.com)
+- URL do repositório: [Repositório](https://github.com/Samuel-Amaro/hangman-game)
+- URL da solução: [Jogo Da Forca](https://hangman-game-five-xi.vercel.app/)
 
 ## Meu processo
 
