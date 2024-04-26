@@ -39,10 +39,10 @@
 		<picture class="logo">
 			<source
 				srcset="/assets/images/logo-mobile.svg"
-				media="(max-width: 679px)"
+				media="(max-width: 1249px)"
 				type="image/svg+xml"
 			/>
-			<source srcset="/assets/images/logo.svg" media="(min-width: 680px)" type="image/svg+xml" />
+			<source srcset="/assets/images/logo.svg" media="(min-width: 1250px)" type="image/svg+xml" />
 			<img src="/assets/images/logo.svg" alt="" />
 		</picture>
 		<RoundedButton
@@ -112,7 +112,12 @@
 		}
 
 		.logo {
-			position: absolute;
+			position: absolute;	
+		}
+	}
+
+	@media screen and (min-width: 1250px) {
+		.logo {
 			top: -110px;
 		}
 	}
